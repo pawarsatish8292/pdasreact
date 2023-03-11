@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bulma/css/bulma.css'
+import ProfileCard from "./profileCard";
+import Siri from "./images/siri.png";
+import Alexa from "./images/alexa.png";
+import Cortana from "./images/cortana.png";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+function app(){
+    return (
+        <div>
+            <section className='hero is-primary'>
+                <div className='hero-body'>
+                    <p className='title'>
+                    Personal Digital Assistants 
+                    </p>
+                    </div>
+            </section>
+            <div className='container' >
+                <section className='section'>
+                 <div className='columns'>
+                    <div className='column is-4'>
+                    <ProfileCard title = "alexa" handle ="@alexa" image ={Alexa} discription = "alexa is made by amazon and helps to buy thing"/>
+                    </div>
+                    <div className='column is-4'>
+                    <ProfileCard title = "cortana" handle ="@cortana" image ={Cortana} discription = "cortana is made by microsoft"/>
+                    </div>
+                    <div className='column is-4'>
+                    <ProfileCard title = "siri" handle ="@siri" image ={Siri} discription = "alexa is made by apple"/>
+                    </div>
+                 </div>
+                </section>
+            </div>                        
+        </div>
+    )
 }
-
-export default App;
+export default app;
